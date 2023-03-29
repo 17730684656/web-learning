@@ -1873,7 +1873,7 @@
               exact: !0,
               meta: {
                 filePath: 'docs/note/index.md',
-                updatedTime: 1677136341e3,
+                updatedTime: 1679162417e3,
                 title: '\u4ecb\u7ecd',
                 nav: {
                   title: '\u8bfb\u4e66\u7b14\u8bb0',
@@ -1907,7 +1907,7 @@
               exact: !0,
               meta: {
                 filePath: 'docs/note/Flutter/index.md',
-                updatedTime: 1679162258999,
+                updatedTime: 1679162417e3,
                 title: '\u7b2c\u4e00\u7ae0',
                 group: {
                   title: 'Flutter \u8bfb\u4e66\u7b14\u8bb0',
@@ -1962,6 +1962,40 @@
                 ],
               },
               title: '\u6570\u7ec4\u53bb\u91cd - web learning',
+            },
+            {
+              path: '/soft-skills/auto',
+              component: n('123w').default,
+              exact: !0,
+              meta: {
+                filePath: 'docs/softSkills/auto.md',
+                updatedTime: 1680057148447,
+                title: 'vant ui \u81ea\u9002\u5e94',
+                nav: {
+                  title: '\u524d\u7aef\u8f6f\u6280\u80fd',
+                  order: 1,
+                  path: '/soft-skills',
+                },
+                group: {
+                  title: 'h5 \u5f00\u53d1\u7684\u6ce8\u610f\u4e8b\u9879',
+                  order: 1,
+                  __fallback: !0,
+                  path: '/soft-skills',
+                },
+                slugs: [
+                  {
+                    depth: 1,
+                    value: 'vant ui \u81ea\u9002\u5e94',
+                    heading: 'vant-ui-\u81ea\u9002\u5e94',
+                  },
+                  {
+                    depth: 2,
+                    value: '\u5355\u4f4d\u8f6c\u6362',
+                    heading: '\u5355\u4f4d\u8f6c\u6362',
+                  },
+                ],
+              },
+              title: 'vant ui \u81ea\u9002\u5e94 - web learning',
             },
             {
               path: '/soft-skills',
@@ -2042,6 +2076,198 @@
       s = c();
     t['default'] = s();
     window.g_umi = { version: '3.5.37' };
+  },
+  '123w': function (e, t, n) {
+    'use strict';
+    n.r(t);
+    var r = n('q1tI'),
+      o = n.n(r),
+      a = n('dEAq'),
+      i = n('H1Ra'),
+      u = o.a.memo((e) => {
+        e.demos;
+        return o.a.createElement(
+          o.a.Fragment,
+          null,
+          o.a.createElement(
+            'div',
+            { className: 'markdown' },
+            o.a.createElement(
+              'h1',
+              { id: 'vant-ui-\u81ea\u9002\u5e94' },
+              o.a.createElement(
+                a['AnchorLink'],
+                {
+                  to: '#vant-ui-\u81ea\u9002\u5e94',
+                  'aria-hidden': 'true',
+                  tabIndex: -1,
+                },
+                o.a.createElement('span', { className: 'icon icon-link' }),
+              ),
+              'vant ui \u81ea\u9002\u5e94',
+            ),
+            o.a.createElement(
+              'p',
+              null,
+              '\u5728\u5f00\u53d1 ',
+              o.a.createElement('code', null, 'H5'),
+              ' \u7f51\u9875\u7684\u65f6\u5019\uff0c\u6211\u4eec\u901a\u5e38\u4f1a\u9009\u62e9\u5df2\u6709\u7684 ',
+              o.a.createElement('code', null, 'UI'),
+              ' \u6846\u67b6\u6765\u5feb\u901f\u642d\u5efa\u3002\u4f46\u662f ',
+              o.a.createElement('code', null, 'UI'),
+              ' \u6846\u67b6\u7684\u9ed8\u8ba4\u50cf\u7d20\u5355\u4f4d\u5927\u591a\u90fd\u662f\u4f7f\u7528 ',
+              o.a.createElement('code', null, 'px'),
+              ' \u7684\uff0c\u800c\u4e3a\u4e86\u505a\u5404\u4e2a\u624b\u673a\u7aef\u7684\u9002\u914d\uff0c\u6211\u4eec\u901a\u5e38\u4f1a\u4f7f\u7528\u5982 ',
+              o.a.createElement('code', null, 'rem\u3001vw\u3001vh'),
+              ' \u7b49\u5355\u4f4d\u3002\u8fd9\u5176\u4e2d\u5c31\u51fa\u73b0\u4e86\u7b2c\u4e00\u4e2a\u95ee\u9898\uff0c\u6211\u4eec\u5e94\u8be5\u600e\u4e48\u6837\u8fdb\u884c\u5355\u4f4d\u7684\u76f8\u4e92\u8f6c\u6362\u5462\uff1f',
+            ),
+            o.a.createElement(
+              'h2',
+              { id: '\u5355\u4f4d\u8f6c\u6362' },
+              o.a.createElement(
+                a['AnchorLink'],
+                {
+                  to: '#\u5355\u4f4d\u8f6c\u6362',
+                  'aria-hidden': 'true',
+                  tabIndex: -1,
+                },
+                o.a.createElement('span', { className: 'icon icon-link' }),
+              ),
+              '\u5355\u4f4d\u8f6c\u6362',
+            ),
+            o.a.createElement(
+              'blockquote',
+              null,
+              o.a.createElement(
+                'p',
+                null,
+                '\u7531\u4e8e\u6211\u901a\u5e38\u662f\u4f7f\u7528 ',
+                o.a.createElement('code', null, 'rem'),
+                ' \u6765\u505a\u9002\u914d\u7684\uff0c\u8fd9\u91cc\u7684\u4f8b\u5b50\u4e5f\u4f7f\u7528 ',
+                o.a.createElement('code', null, 'rem'),
+                '\u3002',
+              ),
+            ),
+            o.a.createElement(
+              'ol',
+              null,
+              o.a.createElement(
+                'li',
+                null,
+                o.a.createElement(
+                  'p',
+                  null,
+                  '\u9996\u5148\uff0c\u6211\u4eec\u9700\u8981\u4f7f\u7528\u5230\u4e24\u4e2a\u63d2\u4ef6 ',
+                  o.a.createElement(
+                    a['Link'],
+                    { to: 'https://www.npmjs.com/package/postcss-pxtorem' },
+                    'postcss-pxtorem',
+                  ),
+                  ' \u548c ',
+                  o.a.createElement(
+                    a['Link'],
+                    { to: 'https://www.npmjs.com/package/amfe-flexible' },
+                    'amfe-flexible',
+                  ),
+                  '\u3002',
+                ),
+                o.a.createElement(
+                  'ul',
+                  null,
+                  o.a.createElement(
+                    'li',
+                    null,
+                    o.a.createElement('code', null, 'postcss-pxtorem'),
+                    '\uff1a\u5c06 ',
+                    o.a.createElement('code', null, 'px'),
+                    ' \u8f6c\u6362\u6210 ',
+                    o.a.createElement('code', null, 'rem'),
+                  ),
+                  o.a.createElement(
+                    'li',
+                    null,
+                    o.a.createElement('code', null, 'amfe-flexible'),
+                    '\uff1a\u7528\u6765\u8bbe\u7f6e ',
+                    o.a.createElement('code', null, 'rem'),
+                    ' \u7684\u4e00\u4e2a\u57fa\u51c6\u503c',
+                  ),
+                ),
+              ),
+              o.a.createElement(
+                'li',
+                null,
+                o.a.createElement(
+                  'p',
+                  null,
+                  '\u5f53\u6211\u4eec\u4e0b\u8f7d\u597d\u8fd9\u4e24\u4e2a\u63d2\u4ef6\u65f6\uff0c\u5c31\u53ef\u4ee5\u8fdb\u884c\u4f7f\u7528\u4e86',
+                ),
+                o.a.createElement(
+                  'ul',
+                  null,
+                  o.a.createElement(
+                    'li',
+                    null,
+                    o.a.createElement(
+                      'p',
+                      null,
+                      '\u5728 ',
+                      o.a.createElement('code', null, 'main.js'),
+                      ' \u4e2d\u5f15\u5165 ',
+                      o.a.createElement('code', null, 'amfe-flexible'),
+                    ),
+                    o.a.createElement(i['a'], {
+                      code: 'import "amfe-flexible";',
+                      lang: 'js',
+                    }),
+                  ),
+                  o.a.createElement(
+                    'li',
+                    null,
+                    o.a.createElement(
+                      'p',
+                      null,
+                      '\u5728\u5f53\u524d\u9879\u76ee\u7684\u6839\u76ee\u5f55\u4e2d\u6dfb\u52a0 ',
+                      o.a.createElement('code', null, 'postcss.config.js'),
+                      ' \u6587\u4ef6',
+                    ),
+                    o.a.createElement(i['a'], {
+                      code: 'module.exports = {\n    plugins: {\n      "postcss-pxtorem": {\n          rootValue({ file }) {\n              // \u5982\u679c\u8bbe\u8ba1\u7a3f\u7684\u5c3a\u5bf8\u4e0d\u662f 375\uff0c\u800c\u662f 750 \u6216\u5176\u4ed6\u5927\u5c0f\uff0c\u5c31\u53ef\u4ee5\u5982\u4e0b\u8bbe\u7f6e\n              return file.indexOf(\'vant\') !== -1 ? 37.5 : 75;\n          },\n          propList: ["*"]\n      }\n    }\n  }',
+                      lang: 'js',
+                    }),
+                  ),
+                ),
+              ),
+            ),
+            o.a.createElement(
+              'p',
+              null,
+              '\u5f53\u5b8c\u6210\u8fd9\u4e9b\u914d\u7f6e\u65f6\uff0c\u6211\u4eec\u5c31\u53ef\u4ee5\u5728\u5199\u7684\u65f6\u5019\u53ef\u4ee5\u76f4\u63a5\u6839\u636e\u8bbe\u8ba1\u7a3f\u4e2d\u7684 ',
+              o.a.createElement('code', null, 'px'),
+              ' \u6765\u7f16\u5199\uff0c\u800c\u4e0d\u9700\u8981\u4e0d\u7528\u624b\u52a8\u8ba1\u7b97 ',
+              o.a.createElement('code', null, 'rem'),
+              ' \u4e86\u3002',
+            ),
+          ),
+        );
+      });
+    t['default'] = (e) => {
+      var t = o.a.useContext(a['context']),
+        n = t.demos;
+      return (
+        o.a.useEffect(() => {
+          var t;
+          null !== e &&
+            void 0 !== e &&
+            null !== (t = e.location) &&
+            void 0 !== t &&
+            t.hash &&
+            a['AnchorLink'].scrollToAnchor(
+              decodeURIComponent(e.location.hash.slice(1)),
+            );
+        }, []),
+        o.a.createElement(u, { demos: n })
+      );
+    };
   },
   '14Sl': function (e, t, n) {
     'use strict';
@@ -10436,7 +10662,7 @@
                     o.a.createElement(
                       a['Link'],
                       { to: 'https://book.flutterchina.club/' },
-                      'Flutter\u5b9e\u6218\u7b2c\u4e8c\u7248',
+                      'Flutter \u5b9e\u6218\u7b2c\u4e8c\u7248',
                     ),
                   ),
                 ),
@@ -13644,7 +13870,7 @@
   },
   RGYn: function (e) {
     e.exports = JSON.parse(
-      '{"menus":{"en-US":{"*":[{"path":"/","title":"\ud83d\udcda WEB LEARNING","meta":{}}],"/note":[{"title":"\u8bfb\u4e66\u7b14\u8bb0","meta":{"order":1,"__fallback":true},"children":[{"path":"/note","title":"\u4ecb\u7ecd","meta":{}}]},{"title":"Flutter \u8bfb\u4e66\u7b14\u8bb0","meta":{"order":2,"__fallback":true},"children":[{"path":"/note/flutter","title":"\u7b2c\u4e00\u7ae0","meta":{}}]}],"/quiz":[{"title":"JavaScript","meta":{"order":1,"__fallback":true},"children":[{"path":"/quiz","title":"\u6570\u7ec4\u53bb\u91cd","meta":{}}]}],"/soft-skills":[{"title":"GitHub Actions","meta":{"order":1,"__fallback":true},"children":[{"path":"/soft-skills","title":"\u4f7f\u7528 github Actions \u81ea\u52a8\u5316\u90e8\u7f72\u4f60\u7684\u7f51\u9875","meta":{}}]}]}},"locales":[{"name":"en-US","label":"English"}],"navs":{"en-US":[{"title":"\u9762\u8bd5\u96c6","order":1,"path":"/quiz"},{"title":"\u524d\u7aef\u8f6f\u6280\u80fd","order":1,"path":"/soft-skills"},{"title":"\u8bfb\u4e66\u7b14\u8bb0","order":2,"path":"/note"}]},"title":"web learning","logo":"/web-learning/image/logo.png","mode":"site","repository":{"url":"","branch":"master"},"theme":{}}',
+      '{"menus":{"en-US":{"*":[{"path":"/","title":"\ud83d\udcda WEB LEARNING","meta":{}}],"/note":[{"title":"\u8bfb\u4e66\u7b14\u8bb0","meta":{"order":1,"__fallback":true},"children":[{"path":"/note","title":"\u4ecb\u7ecd","meta":{}}]},{"title":"Flutter \u8bfb\u4e66\u7b14\u8bb0","meta":{"order":2,"__fallback":true},"children":[{"path":"/note/flutter","title":"\u7b2c\u4e00\u7ae0","meta":{}}]}],"/quiz":[{"title":"JavaScript","meta":{"order":1,"__fallback":true},"children":[{"path":"/quiz","title":"\u6570\u7ec4\u53bb\u91cd","meta":{}}]}],"/soft-skills":[{"title":"GitHub Actions","meta":{"order":1,"__fallback":true},"children":[{"path":"/soft-skills","title":"\u4f7f\u7528 github Actions \u81ea\u52a8\u5316\u90e8\u7f72\u4f60\u7684\u7f51\u9875","meta":{}}]},{"title":"h5 \u5f00\u53d1\u7684\u6ce8\u610f\u4e8b\u9879","meta":{"order":1,"__fallback":true},"children":[{"path":"/soft-skills/auto","title":"vant ui \u81ea\u9002\u5e94","meta":{}}]}]}},"locales":[{"name":"en-US","label":"English"}],"navs":{"en-US":[{"title":"\u9762\u8bd5\u96c6","order":1,"path":"/quiz"},{"title":"\u524d\u7aef\u8f6f\u6280\u80fd","order":1,"path":"/soft-skills"},{"title":"\u8bfb\u4e66\u7b14\u8bb0","order":2,"path":"/note"}]},"title":"web learning","logo":"/web-learning/image/logo.png","mode":"site","repository":{"url":"","branch":"master"},"theme":{}}',
     );
   },
   RIqP: function (e, t, n) {
