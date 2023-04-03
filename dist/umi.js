@@ -1846,7 +1846,7 @@
               exact: !0,
               meta: {
                 filePath: 'docs/index.md',
-                updatedTime: 1678179903e3,
+                updatedTime: 1680261399e3,
                 hero: {
                   title: 'WEB LEARNING',
                   desc: '<div class="markdown"><p>\ud83d\udcda \u8bb0\u5f55\u5b66\u4e60\u524d\u7aef\u7684\u8fc7\u7a0b\uff0c\u5e76\u4e14\u4f1a\u628a\u5de5\u4f5c\u6216\u8005\u5b66\u4e60\u4e2d\u9047\u5230\u7684\u6bd4\u8f83\u96be\u89e3\u51b3\u6216\u8005\u6bd4\u8f83\u597d\u7528\u7684\u4e1c\u897f\u8bb0\u5f55\u4e0b\u6765</p></div>',
@@ -1871,6 +1871,29 @@
                 title: '\ud83d\udcda WEB LEARNING',
               },
               title: '\ud83d\udcda WEB LEARNING - web learning',
+            },
+            {
+              path: '/commonly-used/css',
+              component: n('mgIw').default,
+              exact: !0,
+              meta: {
+                filePath: 'docs/commonlyUsed/css.md',
+                updatedTime: 1680544441032,
+                title: '\u5e38\u7528 CSS',
+                nav: {
+                  title: '\u524d\u7aef\u5e38\u7528\u4ee3\u7801',
+                  order: 4,
+                  path: '/commonly-used',
+                },
+                group: {
+                  title: 'css',
+                  order: 1,
+                  __fallback: !0,
+                  path: '/commonly-used',
+                },
+                slugs: [],
+              },
+              title: '\u5e38\u7528 CSS - web learning',
             },
             {
               path: '/note',
@@ -2008,7 +2031,7 @@
               exact: !0,
               meta: {
                 filePath: 'docs/softSkills/chrome_Extension.md',
-                updatedTime: 1680260849658,
+                updatedTime: 1680261399e3,
                 title: 'manifest.json \u914d\u7f6e\u8be6\u89e3',
                 nav: {
                   title: '\u524d\u7aef\u8f6f\u6280\u80fd',
@@ -2068,6 +2091,12 @@
               },
               title:
                 '\u4f7f\u7528 github Actions \u81ea\u52a8\u5316\u90e8\u7f72\u4f60\u7684\u7f51\u9875 - web learning',
+            },
+            {
+              path: '/commonly-used',
+              meta: { order: 1, __fallback: !0 },
+              exact: !0,
+              redirect: '/commonly-used/css',
             },
           ],
           title: 'web learning',
@@ -3857,8 +3886,8 @@
       H = s('fetch'),
       G = C.f,
       V = G,
-      K = 'process' == b(W),
-      q = !!(z && z.createEvent && c.dispatchEvent),
+      q = 'process' == b(W),
+      K = !!(z && z.createEvent && c.dispatchEvent),
       $ = 'unhandledrejection',
       Y = 'rejectionhandled',
       Z = 0,
@@ -3870,7 +3899,7 @@
         var e = w(B) !== String(B);
         if (!e) {
           if (66 === P) return !0;
-          if (!K && 'function' != typeof PromiseRejectionEvent) return !0;
+          if (!q && 'function' != typeof PromiseRejectionEvent) return !0;
         }
         if (l && !B.prototype['finally']) return !0;
         if (P >= 51 && /native code/.test(B)) return !1;
@@ -3934,7 +3963,7 @@
       },
       ae = function (e, t, n) {
         var r, o;
-        q
+        K
           ? ((r = z.createEvent('Event')),
             (r.promise = t),
             (r.reason = n),
@@ -3953,9 +3982,9 @@
           if (
             o &&
             ((n = _(function () {
-              K ? W.emit('unhandledRejection', r, e) : ae($, e, r);
+              q ? W.emit('unhandledRejection', r, e) : ae($, e, r);
             })),
-            (t.rejection = K || ue(t) ? ee : J),
+            (t.rejection = q || ue(t) ? ee : J),
             n.error)
           )
             throw n.value;
@@ -3966,7 +3995,7 @@
       },
       le = function (e, t) {
         x.call(c, function () {
-          K ? W.emit('rejectionHandled', e) : ae(Y, e, t.value);
+          q ? W.emit('rejectionHandled', e) : ae(Y, e, t.value);
         });
       },
       ce = function (e, t, n, r) {
@@ -4032,7 +4061,7 @@
           return (
             (r.ok = 'function' != typeof e || e),
             (r.fail = 'function' == typeof t && t),
-            (r.domain = K ? W.domain : void 0),
+            (r.domain = q ? W.domain : void 0),
             (n.parent = !0),
             n.reactions.push(r),
             n.state != Z && oe(this, n, !1),
@@ -5241,7 +5270,7 @@
           [a, o]
         );
       };
-    function K(e, t, n, i) {
+    function q(e, t, n, i) {
       var l = i.motionEnter,
         c = void 0 === l || l,
         s = i.motionAppear,
@@ -5266,9 +5295,9 @@
         D = Object(N['a'])(),
         F = Object(a['a'])(D, 2),
         U = F[0],
-        K = F[1],
-        q = Object(N['a'])(A),
-        $ = Object(a['a'])(q, 2),
+        q = F[1],
+        K = Object(N['a'])(A),
+        $ = Object(a['a'])(K, 2),
         Y = $[0],
         Z = $[1],
         Q = Object(N['a'])(null),
@@ -5363,7 +5392,7 @@
       (oe.current = he),
         B(
           function () {
-            K(t);
+            q(t);
             var n,
               r = te.current;
             ((te.current = !0), e) &&
@@ -5402,7 +5431,7 @@
         [Y, pe, me, null !== U && void 0 !== U ? U : t]
       );
     }
-    var q = n('1OyB'),
+    var K = n('1OyB'),
       $ = n('vuIU'),
       Y = n('Ji7U'),
       Z = n('LK+K'),
@@ -5410,7 +5439,7 @@
         Object(Y['a'])(n, e);
         var t = Object(Z['a'])(n);
         function n() {
-          return Object(q['a'])(this, n), t.apply(this, arguments);
+          return Object(K['a'])(this, n), t.apply(this, arguments);
         }
         return (
           Object($['a'])(n, [
@@ -5453,7 +5482,7 @@
             return null;
           }
         }
-        var k = K(b, s, O, e),
+        var k = q(b, s, O, e),
           x = Object(a['a'])(k, 4),
           j = x[0],
           C = x[1],
@@ -5635,7 +5664,7 @@
           var n = Object(Z['a'])(a);
           function a() {
             var e;
-            Object(q['a'])(this, a);
+            Object(K['a'])(this, a);
             for (var t = arguments.length, i = new Array(t), u = 0; u < t; u++)
               i[u] = arguments[u];
             return (
@@ -11756,7 +11785,7 @@
           e.host = n;
         } else {
           if (F.test(t)) return C;
-          for (n = '', r = p(t), o = 0; o < r.length; o++) n += Z(r[o], K);
+          for (n = '', r = p(t), o = 0; o < r.length; o++) n += Z(r[o], q);
           e.host = n;
         }
       },
@@ -11885,9 +11914,9 @@
         }
         return e;
       },
-      K = {},
-      q = d({}, K, { ' ': 1, '"': 1, '<': 1, '>': 1, '`': 1 }),
-      $ = d({}, q, { '#': 1, '?': 1, '{': 1, '}': 1 }),
+      q = {},
+      K = d({}, q, { ' ': 1, '"': 1, '<': 1, '>': 1, '`': 1 }),
+      $ = d({}, K, { '#': 1, '?': 1, '{': 1, '}': 1 }),
       Y = d({}, $, {
         '/': 1,
         ':': 1,
@@ -12297,18 +12326,18 @@
                 ? ((e.query = ''), (c = Se))
                 : '#' == i
                 ? ((e.fragment = ''), (c = Ae))
-                : i != r && (e.path[0] += Z(i, K));
+                : i != r && (e.path[0] += Z(i, q));
               break;
             case Se:
               n || '#' != i
                 ? i != r &&
                   ("'" == i && X(e)
                     ? (e.query += '%27')
-                    : (e.query += '#' == i ? '%23' : Z(i, K)))
+                    : (e.query += '#' == i ? '%23' : Z(i, q)))
                 : ((e.fragment = ''), (c = Ae));
               break;
             case Ae:
-              i != r && (e.fragment += Z(i, q));
+              i != r && (e.fragment += Z(i, K));
               break;
           }
           s++;
@@ -13175,11 +13204,11 @@
         t
       );
     }
-    function K(e) {
+    function q(e) {
       return e && e.__esModule ? e['default'] : e;
     }
-    function q(e, t) {
-      return Object(u['createElement'])(K(e), t);
+    function K(e, t) {
+      return Object(u['createElement'])(q(e), t);
     }
     function $(e, t) {
       var n = Object.assign(
@@ -13188,7 +13217,7 @@
             loading: null,
             delay: 200,
             timeout: null,
-            render: q,
+            render: K,
             webpack: null,
             modules: null,
           },
@@ -13668,7 +13697,7 @@
               ' \u7684\u4f5c\u7528\u662f\uff1a\u8bb0\u5f55\u91cd\u8981\u7684\u5143\u6570\u636e\uff0c\u5b9a\u4e49\u8d44\u6e90\uff0c\u58f0\u660e\u6743\u9650\uff0c\u5e76\u4e14\u6807\u8bc6\u54ea\u4e9b\u6587\u4ef6\u5728\u540e\u53f0\u548c\u9875\u9762\u4e0a\u8fd0\u884c\u3002',
             ),
             o.a.createElement(i['a'], {
-              code: '{\n    "manifest_version": 3, //  chrome \u6269\u5c55\u7684\u7248\u672c  \u6700\u65b0\u7684\u662f v3.  v2\u7248\u672c\u6b63\u5728\u521d\u6b65\u4e0d\u652f\u6301\n    "name": "extension name", //  chrome \u63d2\u4ef6\u7684\u540d\u5b57\n    "description": "extension description", //  chrome \u63d2\u4ef6\u7684\u7b80\u4ecb\n    "version": "1.0", // \u8be5\u63d2\u4ef6\u7684\u7248\u672c\u53f7\n}',
+              code: '{\n  "manifest_version": 3, //  chrome \u6269\u5c55\u7684\u7248\u672c  \u6700\u65b0\u7684\u662f v3.  v2\u7248\u672c\u6b63\u5728\u521d\u6b65\u4e0d\u652f\u6301\n  "name": "extension name", //  chrome \u63d2\u4ef6\u7684\u540d\u5b57\n  "description": "extension description", //  chrome \u63d2\u4ef6\u7684\u7b80\u4ecb\n  "version": "1.0" // \u8be5\u63d2\u4ef6\u7684\u7248\u672c\u53f7\n}',
               lang: 'json',
             }),
           ),
@@ -14112,7 +14141,7 @@
   },
   RGYn: function (e) {
     e.exports = JSON.parse(
-      '{"menus":{"en-US":{"*":[{"path":"/","title":"\ud83d\udcda WEB LEARNING","meta":{}}],"/note":[{"title":"\u8bfb\u4e66\u7b14\u8bb0","meta":{"order":1,"__fallback":true},"children":[{"path":"/note","title":"\u4ecb\u7ecd","meta":{}}]},{"title":"Flutter \u8bfb\u4e66\u7b14\u8bb0","meta":{"order":2,"__fallback":true},"children":[{"path":"/note/flutter","title":"\u7b2c\u4e00\u7ae0","meta":{}}]}],"/quiz":[{"title":"JavaScript","meta":{"order":1,"__fallback":true},"children":[{"path":"/quiz","title":"\u6570\u7ec4\u53bb\u91cd","meta":{}}]}],"/soft-skills":[{"title":"GitHub Actions","meta":{"order":1,"__fallback":true},"children":[{"path":"/soft-skills","title":"\u4f7f\u7528 github Actions \u81ea\u52a8\u5316\u90e8\u7f72\u4f60\u7684\u7f51\u9875","meta":{}}]},{"title":"h5 \u5f00\u53d1\u7684\u6ce8\u610f\u4e8b\u9879","meta":{"order":1,"__fallback":true},"children":[{"path":"/soft-skills/auto","title":"vant ui \u81ea\u9002\u5e94","meta":{}}]},{"title":"chrome \u63d2\u4ef6\u5f00\u53d1\u624b\u518c","meta":{"order":3,"__fallback":true},"children":[{"path":"/soft-skills/chrome_extension","title":"manifest.json \u914d\u7f6e\u8be6\u89e3","meta":{}}]}]}},"locales":[{"name":"en-US","label":"English"}],"navs":{"en-US":[{"title":"\u9762\u8bd5\u96c6","order":1,"path":"/quiz"},{"title":"\u524d\u7aef\u8f6f\u6280\u80fd","order":1,"path":"/soft-skills"},{"title":"\u8bfb\u4e66\u7b14\u8bb0","order":2,"path":"/note"}]},"title":"web learning","logo":"/web-learning/image/logo.png","mode":"site","repository":{"url":"","branch":"master"},"theme":{}}',
+      '{"menus":{"en-US":{"*":[{"path":"/","title":"\ud83d\udcda WEB LEARNING","meta":{}}],"/commonly-used":[{"title":"css","meta":{"order":1,"__fallback":true},"children":[{"path":"/commonly-used/css","title":"\u5e38\u7528 CSS","meta":{}}]}],"/note":[{"title":"\u8bfb\u4e66\u7b14\u8bb0","meta":{"order":1,"__fallback":true},"children":[{"path":"/note","title":"\u4ecb\u7ecd","meta":{}}]},{"title":"Flutter \u8bfb\u4e66\u7b14\u8bb0","meta":{"order":2,"__fallback":true},"children":[{"path":"/note/flutter","title":"\u7b2c\u4e00\u7ae0","meta":{}}]}],"/quiz":[{"title":"JavaScript","meta":{"order":1,"__fallback":true},"children":[{"path":"/quiz","title":"\u6570\u7ec4\u53bb\u91cd","meta":{}}]}],"/soft-skills":[{"title":"GitHub Actions","meta":{"order":1,"__fallback":true},"children":[{"path":"/soft-skills","title":"\u4f7f\u7528 github Actions \u81ea\u52a8\u5316\u90e8\u7f72\u4f60\u7684\u7f51\u9875","meta":{}}]},{"title":"h5 \u5f00\u53d1\u7684\u6ce8\u610f\u4e8b\u9879","meta":{"order":1,"__fallback":true},"children":[{"path":"/soft-skills/auto","title":"vant ui \u81ea\u9002\u5e94","meta":{}}]},{"title":"chrome \u63d2\u4ef6\u5f00\u53d1\u624b\u518c","meta":{"order":3,"__fallback":true},"children":[{"path":"/soft-skills/chrome_extension","title":"manifest.json \u914d\u7f6e\u8be6\u89e3","meta":{}}]}]}},"locales":[{"name":"en-US","label":"English"}],"navs":{"en-US":[{"title":"\u9762\u8bd5\u96c6","order":1,"path":"/quiz"},{"title":"\u524d\u7aef\u8f6f\u6280\u80fd","order":1,"path":"/soft-skills"},{"title":"\u8bfb\u4e66\u7b14\u8bb0","order":2,"path":"/note"},{"title":"\u524d\u7aef\u5e38\u7528\u4ee3\u7801","order":4,"path":"/commonly-used"}]},"title":"web learning","logo":"/web-learning/image/logo.png","mode":"site","repository":{"url":"","branch":"master"},"theme":{}}',
     );
   },
   RIqP: function (e, t, n) {
@@ -14682,10 +14711,10 @@
         return V;
       }),
       n.d(t, 'k', function () {
-        return K;
+        return q;
       }),
       n.d(t, 'l', function () {
-        return q;
+        return K;
       }),
       n.d(t, 'm', function () {
         return $;
@@ -15108,15 +15137,15 @@
     function V() {
       return G(m);
     }
-    function K() {
+    function q() {
       return G(y).location;
     }
-    function q() {
+    function K() {
       var e = G(y).match;
       return e ? e.params : {};
     }
     function $(e) {
-      var t = K(),
+      var t = q(),
         n = G(y).match;
       return e ? P(t.pathname, e) : n;
     }
@@ -16875,7 +16904,7 @@
         W(1);
       }
       var V = 0;
-      function K(e) {
+      function q(e) {
         (V += e),
           1 === V && 1 === e
             ? (window.addEventListener(I, C),
@@ -16884,23 +16913,23 @@
               (window.removeEventListener(I, C),
               o && window.removeEventListener(R, P));
       }
-      var q = !1;
+      var K = !1;
       function $(e) {
         void 0 === e && (e = !1);
         var t = b.setPrompt(e);
         return (
-          q || (K(1), (q = !0)),
+          K || (q(1), (K = !0)),
           function () {
-            return q && ((q = !1), K(-1)), t();
+            return K && ((K = !1), q(-1)), t();
           }
         );
       }
       function Y(e) {
         var t = b.appendListener(e);
         return (
-          K(1),
+          q(1),
           function () {
-            K(-1), t();
+            q(-1), t();
           }
         );
       }
@@ -17058,15 +17087,15 @@
       function V() {
         G(-1);
       }
-      function K() {
+      function q() {
         G(1);
       }
-      var q = 0;
+      var K = 0;
       function $(e) {
-        (q += e),
-          1 === q && 1 === e
+        (K += e),
+          1 === K && 1 === e
             ? window.addEventListener(M, j)
-            : 0 === q && window.removeEventListener(M, j);
+            : 0 === K && window.removeEventListener(M, j);
       }
       var Y = !1;
       function Z(e) {
@@ -17097,7 +17126,7 @@
         replace: H,
         go: G,
         goBack: V,
-        goForward: K,
+        goForward: q,
         block: Z,
         listen: Q,
       };
@@ -17288,9 +17317,9 @@
         _ = function (e) {
           return c(this, _), new C(d(e));
         };
-        for (var V, K = (_[S] = C[S]), q = m(C), $ = 0; q.length > $; )
-          (V = q[$++]) in _ || i(_, V, C[V]);
-        K.constructor = _;
+        for (var V, q = (_[S] = C[S]), K = m(C), $ = 0; K.length > $; )
+          (V = K[$++]) in _ || i(_, V, C[V]);
+        q.constructor = _;
       }
       v && h(R) !== T && v(R, T);
       var Y = new I(new _(2)),
@@ -18197,8 +18226,8 @@
       },
       V = r['forwardRef'](G);
     V.displayName = 'RawItem';
-    var K = V,
-      q = [
+    var q = V,
+      K = [
         'prefixCls',
         'data',
         'renderItem',
@@ -18243,7 +18272,7 @@
         j = void 0 === A ? 'div' : A,
         C = e.itemComponent,
         _ = e.onVisibleChange,
-        I = Object(c['a'])(e, q),
+        I = Object(c['a'])(e, K),
         R = U(),
         T = 'full' === y,
         P = R(null),
@@ -18257,7 +18286,7 @@
         H = z[1],
         G = R(0),
         V = Object(u['a'])(G, 2),
-        K = V[0],
+        q = V[0],
         X = V[1],
         J = R(0),
         ee = Object(u['a'])(J, 2),
@@ -18286,7 +18315,7 @@
         ye = ge[0],
         be = ge[1],
         we = ''.concat(o, '-item'),
-        Ee = Math.max(K, te),
+        Ee = Math.max(q, te),
         Oe = E === Y,
         ke = l.length && Oe,
         xe = E === Z,
@@ -18479,7 +18508,7 @@
     }
     var J = r['forwardRef'](X);
     (J.displayName = 'Overflow'),
-      (J.Item = K),
+      (J.Item = q),
       (J.RESPONSIVE = Y),
       (J.INVALIDATE = Z);
     var ee = J,
@@ -18703,13 +18732,13 @@
           H = Object(c['a'])(z, Ie),
           G = I.includes(u),
           V = me(F.length),
-          K = function (e) {
+          q = function (e) {
             if (!D) {
               var t = B(e);
               null === g || void 0 === g || g(he(t)), A(t);
             }
           },
-          q = function (e) {
+          K = function (e) {
             if (
               (null === y || void 0 === y || y(e), e.which === S['a'].ENTER)
             ) {
@@ -18748,8 +18777,8 @@
                 t),
                 o,
               ),
-              onClick: K,
-              onKeyDown: q,
+              onClick: q,
+              onKeyDown: K,
               onFocus: $,
             },
           ),
@@ -18890,8 +18919,8 @@
     var He = We,
       Ge = n('JX7q'),
       Ve = n('i8i4'),
-      Ke = n.n(Ve);
-    function qe(e, t) {
+      qe = n.n(Ve);
+    function Ke(e, t) {
       if (!e) return !1;
       if (e.contains) return e.contains(t);
       var n = t;
@@ -18904,9 +18933,9 @@
     var $e = n('m+aA'),
       Ye = n('c+Xe');
     function Ze(e, t, n, r) {
-      var o = Ke.a.unstable_batchedUpdates
+      var o = qe.a.unstable_batchedUpdates
         ? function (e) {
-            Ke.a.unstable_batchedUpdates(n, e);
+            qe.a.unstable_batchedUpdates(n, e);
           }
         : n;
       return (
@@ -18953,7 +18982,7 @@
               }
             );
           }, []),
-          u.current ? Ke.a.createPortal(a, u.current) : null
+          u.current ? qe.a.createPortal(a, u.current) : null
         );
       }),
       Je = Xe;
@@ -19318,10 +19347,10 @@
         ? Gt(e, t)
         : Ht(e, t, n);
     }
-    function Kt(e, t) {
+    function qt(e, t) {
       for (var n = 0; n < e.length; n++) t(e[n]);
     }
-    function qt(e) {
+    function Kt(e) {
       return 'border-box' === Ot(e, 'boxSizing');
     }
     'undefined' !== typeof window && (Ot = window.getComputedStyle ? Pt : Ut);
@@ -19372,7 +19401,7 @@
           'width' === t
             ? Math.floor(e.getBoundingClientRect().width)
             : Math.floor(e.getBoundingClientRect().height),
-        i = qt(e),
+        i = Kt(e),
         u = 0;
       (null === a || void 0 === a || a <= 0) &&
         ((a = void 0),
@@ -19392,7 +19421,7 @@
           : c + (r === Zt ? -en(e, ['border'], o) : en(e, ['margin'], o))
         : u + en(e, $t.slice(r), o);
     }
-    Kt(['Width', 'Height'], function (e) {
+    qt(['Width', 'Height'], function (e) {
       (tn['doc'.concat(e)] = function (t) {
         var n = t.document;
         return Math.max(
@@ -19429,7 +19458,7 @@
       for (var n in t) t.hasOwnProperty(n) && (e[n] = t[n]);
       return e;
     }
-    Kt(['width', 'height'], function (e) {
+    qt(['width', 'height'], function (e) {
       var t = e.charAt(0).toUpperCase() + e.slice(1);
       tn['outer'.concat(t)] = function (t, n) {
         return t && on(t, e, n ? Xt : Qt);
@@ -19439,7 +19468,7 @@
         var o = r;
         if (void 0 === o) return t && on(t, e, Yt);
         if (t) {
-          var a = qt(t);
+          var a = Kt(t);
           return a && (o += en(t, ['padding', 'border'], n)), St(t, e, o);
         }
       };
@@ -19456,7 +19485,7 @@
         Vt(e, t, n || {});
       },
       isWindow: Rt,
-      each: Kt,
+      each: qt,
       css: St,
       clone: function (e) {
         var t,
@@ -19860,7 +19889,7 @@
     }
     function Nn(e, t) {
       e !== document.activeElement &&
-        qe(t, e) &&
+        Ke(t, e) &&
         'function' === typeof e.focus &&
         e.focus();
     }
@@ -20037,8 +20066,8 @@
         });
       };
     }
-    var Kn = ['measure', 'alignPre', 'align', null, 'motion'],
-      qn = function (e, t) {
+    var qn = ['measure', 'alignPre', 'align', null, 'motion'],
+      Kn = function (e, t) {
         var n = Object(g['a'])(null),
           o = Object(u['a'])(n, 2),
           a = o[0],
@@ -20090,8 +20119,8 @@
                         while (1)
                           switch ((e.prev = e.next)) {
                             case 0:
-                              (t = Kn.indexOf(a)),
-                                (n = Kn[t + 1]),
+                              (t = qn.indexOf(a)),
+                                (n = qn[t + 1]),
                                 n && -1 !== t && c(n);
                             case 3:
                             case 'end':
@@ -20178,7 +20207,7 @@
         function D() {
           p && L(b());
         }
-        var F = qn(n, D),
+        var F = Kn(n, D),
           B = Object(u['a'])(F, 2),
           U = B[0],
           z = B[1],
@@ -20186,8 +20215,8 @@
           H = Object(u['a'])(W, 2),
           G = H[0],
           V = H[1],
-          K = Object(r['useRef'])();
-        function q() {
+          q = Object(r['useRef'])();
+        function K() {
           return y || b;
         }
         function $() {
@@ -20215,7 +20244,7 @@
                   ? $()
                   : z(function () {
                       var e;
-                      null === (e = K.current) || void 0 === e || e.call(K);
+                      null === (e = q.current) || void 0 === e || e.call(q);
                     }));
             },
             [G],
@@ -20223,7 +20252,7 @@
         var Z = Object(s['a'])({}, at(e));
         function Q() {
           return new Promise(function (e) {
-            K.current = e;
+            q.current = e;
           });
         }
         ['onAppearEnd', 'onEnterEnd', 'onLeaveEnd'].forEach(function (e) {
@@ -20289,7 +20318,7 @@
               return r['createElement'](
                 Wn,
                 {
-                  target: q(),
+                  target: K(),
                   key: 'popup',
                   ref: j,
                   monitorWindowResize: !0,
@@ -20476,7 +20505,7 @@
                 var n;
                 (e.relatedTarget &&
                   !e.relatedTarget.setTimeout &&
-                  qe(
+                  Ke(
                     null === (n = t.popupRef.current) || void 0 === n
                       ? void 0
                       : n.getElement(),
@@ -20556,8 +20585,8 @@
                 var n = e.target,
                   r = t.getRootDomNode(),
                   o = t.getPopupDomNode();
-                (qe(r, n) && !t.isContextMenuOnly()) ||
-                  qe(o, n) ||
+                (Ke(r, n) && !t.isContextMenuOnly()) ||
+                  Ke(o, n) ||
                   t.hasPopupMouseDown ||
                   t.close();
               }
@@ -20569,7 +20598,7 @@
                 var n = Object($e['a'])(t.triggerRef.current);
                 if (n) return n;
               } catch (r) {}
-              return Ke.a.findDOMNode(Object(Ge['a'])(t));
+              return qe.a.findDOMNode(Object(Ge['a'])(t));
             }),
             Object(i['a'])(
               Object(Ge['a'])(t),
@@ -21297,8 +21326,8 @@
           H = r['useContext'](Oe),
           G = H.isSubPathKey,
           V = Ee(),
-          K = ''.concat(_, '-submenu'),
-          q = T || p,
+          q = ''.concat(_, '-submenu'),
+          K = T || p,
           $ = r['useRef'](),
           Y = r['useRef']();
         var Z = m || L,
@@ -21306,7 +21335,7 @@
           X = R.includes(f),
           J = !P && X,
           ee = G(N, f),
-          ne = de(f, q, x, S),
+          ne = de(f, K, x, S),
           re = ne.active,
           oe = Object(c['a'])(ne, yr),
           ae = r['useState'](!1),
@@ -21314,7 +21343,7 @@
           ue = ie[0],
           le = ie[1],
           se = function (e) {
-            q || le(e);
+            K || le(e);
           },
           pe = function (e) {
             se(!0), null === E || void 0 === E || E({ key: f, domEvent: e });
@@ -21330,7 +21359,7 @@
           ),
           be = me(V.length),
           we = function (e) {
-            q ||
+            K ||
               (null === k || void 0 === k || k({ key: f, domEvent: e }),
               'inline' === I && B(f, !X));
           },
@@ -21350,15 +21379,15 @@
               {
                 role: 'menuitem',
                 style: be,
-                className: ''.concat(K, '-title'),
-                tabIndex: q ? null : -1,
+                className: ''.concat(q, '-title'),
+                tabIndex: K ? null : -1,
                 ref: $,
                 title: 'string' === typeof l ? l : null,
                 'data-menu-id': P && j ? null : j,
                 'aria-expanded': J,
                 'aria-haspopup': !0,
                 'aria-controls': Ce,
-                'aria-disabled': q,
+                'aria-disabled': K,
                 onClick: we,
                 onFocus: Ae,
               },
@@ -21375,7 +21404,7 @@
                   { isOpen: J, isSubMenu: !0 },
                 ),
               },
-              r['createElement']('i', { className: ''.concat(K, '-arrow') }),
+              r['createElement']('i', { className: ''.concat(q, '-arrow') }),
             ),
           ),
           Ie = r['useRef'](I);
@@ -21387,7 +21416,7 @@
             vr,
             {
               mode: Re,
-              prefixCls: K,
+              prefixCls: q,
               visible: !h && J && 'inline' !== I,
               popupClassName: y,
               popupOffset: b,
@@ -21396,7 +21425,7 @@
                 { mode: 'horizontal' === Re ? 'vertical' : Re },
                 r['createElement'](He, { id: Ce, ref: Y }, v),
               ),
-              disabled: q,
+              disabled: K,
               onVisibleChange: xe,
             },
             _e,
@@ -21408,14 +21437,14 @@
             component: 'li',
             style: n,
             className: d()(
-              K,
-              ''.concat(K, '-').concat(I),
+              q,
+              ''.concat(q, '-').concat(I),
               o,
               ((t = {}),
-              Object(i['a'])(t, ''.concat(K, '-open'), J),
-              Object(i['a'])(t, ''.concat(K, '-active'), ye),
-              Object(i['a'])(t, ''.concat(K, '-selected'), ee),
-              Object(i['a'])(t, ''.concat(K, '-disabled'), q),
+              Object(i['a'])(t, ''.concat(q, '-open'), J),
+              Object(i['a'])(t, ''.concat(q, '-active'), ye),
+              Object(i['a'])(t, ''.concat(q, '-selected'), ee),
+              Object(i['a'])(t, ''.concat(q, '-disabled'), K),
               t),
             ),
             onMouseEnter: pe,
@@ -21426,7 +21455,7 @@
         );
         return (
           W &&
-            (Te = W(Te, e, { selected: ee, active: ye, open: J, disabled: q })),
+            (Te = W(Te, e, { selected: ee, active: ye, open: J, disabled: K })),
           r['createElement'](
             fe,
             {
@@ -21701,7 +21730,7 @@
         return e.split(Wr);
       },
       Vr = 'rc-menu-more';
-    function Kr() {
+    function qr() {
       var e = r['useState']({}),
         t = Object(u['a'])(e, 2),
         n = t[1],
@@ -21779,7 +21808,7 @@
         }
       );
     }
-    var qr = [
+    var Kr = [
         'prefixCls',
         'rootClassName',
         'style',
@@ -21860,9 +21889,9 @@
           H = e.defaultSelectedKeys,
           G = e.selectedKeys,
           V = e.onSelect,
-          K = e.onDeselect,
-          q = e.inlineIndent,
-          $ = void 0 === q ? 24 : q,
+          q = e.onDeselect,
+          K = e.inlineIndent,
+          $ = void 0 === K ? 24 : K,
           Y = e.motion,
           Z = e.defaultMotions,
           Q = e.triggerSubMenuAction,
@@ -21880,7 +21909,7 @@
           se =
             (e.openAnimation, e.openTransitionName, e._internalRenderMenuItem),
           de = e._internalRenderSubMenuItem,
-          pe = Object(c['a'])(e, qr),
+          pe = Object(c['a'])(e, Kr),
           ve = r['useMemo'](
             function () {
               return Fe(E, y, $r);
@@ -21923,9 +21952,9 @@
             He(e), null === le || void 0 === le || le(e);
           },
           Ve = r['useState'](We),
-          Ke = Object(u['a'])(Ve, 2),
-          qe = Ke[0],
-          $e = Ke[1],
+          qe = Object(u['a'])(Ve, 2),
+          Ke = qe[0],
+          $e = qe[1],
           Ye = 'inline' === Ie,
           Ze = r['useRef'](!1);
         r['useEffect'](
@@ -21936,7 +21965,7 @@
         ),
           r['useEffect'](
             function () {
-              Ze.current && (Ye ? He(qe) : Ge($r));
+              Ze.current && (Ye ? He(Ke) : Ge($r));
             },
             [Ye],
           ),
@@ -21948,7 +21977,7 @@
               }
             );
           }, []);
-        var Qe = Kr(),
+        var Qe = qr(),
           Xe = Qe.registerPath,
           Je = Qe.unregisterPath,
           et = Qe.refreshOverflowKeys,
@@ -22056,7 +22085,7 @@
                 { selectedKeys: t },
               );
               r
-                ? null === K || void 0 === K || K(o)
+                ? null === q || void 0 === q || q(o)
                 : null === V || void 0 === V || V(o);
             }
             !W && We.length && 'inline' !== Ie && Ge($r);
@@ -22899,11 +22928,11 @@
         }),
         G = Object(u['a'])(H, 2),
         V = G[0],
-        K = G[1],
-        q = jo(0, function (e, t) {
+        q = G[1],
+        K = jo(0, function (e, t) {
           !W && P && P({ direction: e > t ? 'top' : 'bottom' });
         }),
-        $ = Object(u['a'])(q, 2),
+        $ = Object(u['a'])(K, 2),
         Y = $[0],
         Z = $[1],
         Q = Object(r['useState'])(0),
@@ -22971,13 +23000,13 @@
             ? (n = -t.left)
             : t.left + t.width > -V + ue && (n = -(t.left + t.width - ue)),
             Z(0),
-            K(_e(n));
+            q(_e(n));
         } else {
           var r = Y;
           t.top < -Y
             ? (r = -t.top)
             : t.top + t.height > -Y + fe && (r = -(t.top + t.height - fe)),
-            K(0),
+            q(0),
             Z(_e(r));
         }
       }
@@ -22990,7 +23019,7 @@
         }
         if (W) {
           if (ue >= J) return !1;
-          n(K, e);
+          n(q, e);
         } else {
           if (fe >= re) return !1;
           n(Z, t);
@@ -23106,8 +23135,8 @@
             });
         }),
         Ve = c.slice(0, Ue),
-        Ke = c.slice(ze + 1),
-        qe = [].concat(Object(w['a'])(Ve), Object(w['a'])(Ke)),
+        qe = c.slice(ze + 1),
+        Ke = [].concat(Object(w['a'])(Ve), Object(w['a'])(qe)),
         $e = Object(r['useState'])(),
         Ye = Object(u['a'])($e, 2),
         Ze = Ye[0],
@@ -23160,7 +23189,7 @@
         nt,
         rt,
         ot,
-        at = !!qe.length,
+        at = !!Ke.length,
         it = ''.concat(l, '-nav-wrap');
       return (
         W
@@ -23246,7 +23275,7 @@
                 null === S || void 0 === S ? void 0 : S.removeAriaLabel,
               ref: L,
               prefixCls: l,
-              tabs: qe,
+              tabs: Ke,
               className: !at && Ae,
               tabMoving: !!Pe,
             }),
@@ -23439,18 +23468,18 @@
       var H = Object(r['useState'])(!1),
         G = Object(u['a'])(H, 2),
         V = G[0],
-        K = G[1];
+        q = G[1];
       Object(r['useEffect'])(function () {
-        K(h());
+        q(h());
       }, []);
-      var q = b(
+      var K = b(
           function () {
             var e;
             return null === (e = z[0]) || void 0 === e ? void 0 : e.key;
           },
           { value: w, defaultValue: E },
         ),
-        $ = Object(u['a'])(q, 2),
+        $ = Object(u['a'])(K, 2),
         Y = $[0],
         Z = $[1],
         Q = Object(r['useState'])(function () {
@@ -23569,14 +23598,14 @@
       Go = n('M/Q6');
     n('RZMt');
     function Vo(e, t) {
-      return Zo(e) || Yo(e, t) || qo(e, t) || Ko();
+      return Zo(e) || Yo(e, t) || Ko(e, t) || qo();
     }
-    function Ko() {
+    function qo() {
       throw new TypeError(
         'Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.',
       );
     }
-    function qo(e, t) {
+    function Ko(e, t) {
       if (e) {
         if ('string' === typeof e) return $o(e, t);
         var n = Object.prototype.toString.call(e).slice(8, -1);
@@ -23696,13 +23725,13 @@
         H = Object(Wo['usePrefersColor'])(),
         G = Vo(H, 1),
         V = G[0],
-        K = c.actionBarRender,
-        q =
-          void 0 === K
+        q = c.actionBarRender,
+        K =
+          void 0 === q
             ? function (e) {
                 return e;
               }
-            : K;
+            : q;
       function $(e) {
         j(e), R(Qo(e, c.sources[e]));
       }
@@ -23798,7 +23827,7 @@
           o.a.createElement(
             'div',
             { className: '__dumi-default-previewer-actions' },
-            q(
+            K(
               o.a.createElement(
                 o.a.Fragment,
                 null,
@@ -25948,14 +25977,14 @@
         while (r > n) o[n] = t[n++];
         return o;
       },
-      K = function (e, t) {
+      q = function (e, t) {
         R(e, t, {
           get: function () {
             return _(this)[t];
           },
         });
       },
-      q = function (e) {
+      K = function (e) {
         var t;
         return (
           e instanceof N ||
@@ -25985,10 +26014,10 @@
       ? (D ||
           ((A.f = Y),
           (S.f = Z),
-          K(U, 'buffer'),
-          K(U, 'byteOffset'),
-          K(U, 'byteLength'),
-          K(U, 'length')),
+          q(U, 'buffer'),
+          q(U, 'byteOffset'),
+          q(U, 'byteLength'),
+          q(U, 'length')),
         r(
           { target: 'Object', stat: !0, forced: !D },
           { getOwnPropertyDescriptor: Y, defineProperty: Z },
@@ -26030,7 +26059,7 @@
                   C(
                     (function () {
                       return y(t)
-                        ? q(t)
+                        ? K(t)
                           ? void 0 !== r
                             ? new v(t, h(n, a), r)
                             : void 0 !== n
@@ -26059,7 +26088,7 @@
                   s = 0,
                   f = 0;
                 if (y(t)) {
-                  if (!q(t)) return W(t) ? V(m, t) : O.call(m, t);
+                  if (!K(t)) return W(t) ? V(m, t) : O.call(m, t);
                   (o = t), (f = h(n, a));
                   var v = t.byteLength;
                   if (void 0 === r) {
@@ -28188,6 +28217,69 @@
     );
   },
   mdU6: function (e, t, n) {},
+  mgIw: function (e, t, n) {
+    'use strict';
+    n.r(t);
+    var r = n('q1tI'),
+      o = n.n(r),
+      a = n('dEAq'),
+      i = n('H1Ra'),
+      u = o.a.memo((e) => {
+        e.demos;
+        return o.a.createElement(
+          o.a.Fragment,
+          null,
+          o.a.createElement(
+            'div',
+            { className: 'markdown' },
+            o.a.createElement(
+              'ol',
+              null,
+              o.a.createElement(
+                'li',
+                null,
+                o.a.createElement('p', null, '\u9996\u884c\u7f29\u8fdb'),
+                o.a.createElement(i['a'], {
+                  code: '/* \u503c\u53ef\u4ee5\u662f\u8d1f\u6570\uff0c\u8d1f\u6570\u7684\u8bdd\u5c06\u7b2c\u4e00\u884c\u5de6\u7f29\u8fdb */\n/* \u8be5\u503c\u662f\u53ef\u4ee5\u88ab \u7ee7\u627f \u7684 */\n/* \u5c5e\u6027\u503c\u6709\u4e09\u79cd\uff1a */\n/*   1. length\uff1a\u56fa\u5b9a\u7684\u7f29\u8fdb\uff0c\u9ed8\u8ba4\u503c\u662f 0 */\n/*   2. %\uff1a\u57fa\u4e8e\u7236\u5143\u7d20\u5bbd\u5ea6\u7684\u767e\u5206\u6bd4\u7f29\u8fdb */\n/*   3. inherit\uff1a\u4ece\u7236\u5143\u7d20\u7ee7\u627f text-indent \u7684\u5c5e\u6027\u503c */\ntext-indent: 2em;',
+                  lang: 'css',
+                }),
+              ),
+              o.a.createElement(
+                'li',
+                null,
+                o.a.createElement(
+                  'p',
+                  null,
+                  '\u6587\u672c\u6ea2\u51fa\u9690\u85cf',
+                ),
+                o.a.createElement(i['a'], {
+                  code: '/* \u5355\u884c\u6587\u672c\u7f29\u8fdb */\noverflow: hidden;            /* \u8d85\u51fa\u90e8\u5206\u8fdb\u884c\u9690\u85cf */\nwhite-space: nowrap;         /* \u4f7f\u6587\u672c\u4e0d\u8fdb\u884c\u6362\u884c */\ntext-overflow: ellipsis;     /* \u8d85\u51fa\u90e8\u5206\u7684\u6587\u5b57\u4f7f\u7528\u7701\u7565\u53f7\u4ee3\u66ff */\n\n\n/* \u591a\u884c\u6587\u672c\u7f29\u8fdb */\noverflow: hidden;            /* \u8d85\u51fa\u90e8\u5206\u8fdb\u884c\u9690\u85cf */\ntext-overflow: ellipsis;     /* \u8d85\u51fa\u90e8\u5206\u7684\u6587\u5b57\u4f7f\u7528\u7701\u7565\u53f7\u4ee3\u66ff */\ndisplay: -webkit-box;        /* CSS3 \u5c5e\u6027\uff0c\u6d41\u4f53\u5e03\u5c40 --- \u5f39\u6027\u76d2\u5b50 */\n-webkit-line-clamp: 3;       /* \u53ef\u4ee5\u5c55\u793a\u7684\u884c\u6570 */\n-webkit-box-orient: vertical;/* \u5b50\u5143\u7d20\u7684\u6392\u5217\u65b9\u5f0f  vertical\uff1a\u5782\u76f4   orhorizontal\uff1a\u6c34\u5e73 */',
+                  lang: 'css',
+                }),
+              ),
+            ),
+          ),
+        );
+      });
+    t['default'] = (e) => {
+      var t = o.a.useContext(a['context']),
+        n = t.demos;
+      return (
+        o.a.useEffect(() => {
+          var t;
+          null !== e &&
+            void 0 !== e &&
+            null !== (t = e.location) &&
+            void 0 !== t &&
+            t.hash &&
+            a['AnchorLink'].scrollToAnchor(
+              decodeURIComponent(e.location.hash.slice(1)),
+            );
+        }, []),
+        o.a.createElement(u, { demos: n })
+      );
+    };
+  },
   mgyK: function (e, t, n) {
     var r = n('NC/Y');
     e.exports = /Version\/10\.\d+(\.\d+)?( Mobile\/\w+)? Safari\//.test(r);
@@ -29029,8 +29121,8 @@
       H = D.set,
       G = D.getterFor(U),
       V = Object[z],
-      K = o.Symbol,
-      q = a('JSON', 'stringify'),
+      q = o.Symbol,
+      K = a('JSON', 'stringify'),
       $ = x.f,
       Y = S.f,
       Z = O.f,
@@ -29062,7 +29154,7 @@
             }
           : Y,
       ie = function (e, t) {
-        var n = (X[e] = b(K[z]));
+        var n = (X[e] = b(q[z]));
         return (
           H(n, { type: U, tag: e, description: t }), u || (n.description = t), n
         );
@@ -29072,7 +29164,7 @@
             return 'symbol' == typeof e;
           }
         : function (e) {
-            return Object(e) instanceof K;
+            return Object(e) instanceof q;
           },
       le = function (e, t, n) {
         e === V && le(J, t, n), h(e);
@@ -29143,8 +29235,8 @@
       };
     if (
       (l ||
-        ((K = function () {
-          if (this instanceof K) throw TypeError('Symbol is not a constructor');
+        ((q = function () {
+          if (this instanceof q) throw TypeError('Symbol is not a constructor');
           var e =
               arguments.length && void 0 !== arguments[0]
                 ? String(arguments[0])
@@ -29157,10 +29249,10 @@
             };
           return u && oe && ae(V, t, { configurable: !0, set: n }), ie(t, e);
         }),
-        C(K[z], 'toString', function () {
+        C(q[z], 'toString', function () {
           return G(this).tag;
         }),
-        C(K, 'withoutSetter', function (e) {
+        C(q, 'withoutSetter', function (e) {
           return ie(T(e), e);
         }),
         (A.f = fe),
@@ -29172,14 +29264,14 @@
           return ie(P(e), e);
         }),
         u &&
-          (Y(K[z], 'description', {
+          (Y(q[z], 'description', {
             configurable: !0,
             get: function () {
               return G(this).description;
             },
           }),
           i || C(V, 'propertyIsEnumerable', fe, { unsafe: !0 }))),
-      r({ global: !0, wrap: !0, forced: !l, sham: !l }, { Symbol: K }),
+      r({ global: !0, wrap: !0, forced: !l, sham: !l }, { Symbol: q }),
       F(w(ne), function (e) {
         N(e);
       }),
@@ -29189,7 +29281,7 @@
           for: function (e) {
             var t = String(e);
             if (f(ee, t)) return ee[t];
-            var n = K(t);
+            var n = q(t);
             return (ee[t] = n), (te[n] = t), n;
           },
           keyFor: function (e) {
@@ -29231,14 +29323,14 @@
           },
         },
       ),
-      q)
+      K)
     ) {
       var ve =
         !l ||
         s(function () {
-          var e = K();
+          var e = q();
           return (
-            '[null]' != q([e]) || '{}' != q({ a: e }) || '{}' != q(Object(e))
+            '[null]' != K([e]) || '{}' != K({ a: e }) || '{}' != K(Object(e))
           );
         });
       r(
@@ -29260,13 +29352,13 @@
                       return t;
                   }),
                 (o[1] = t),
-                q.apply(null, o)
+                K.apply(null, o)
               );
           },
         },
       );
     }
-    K[z][W] || j(K[z], W, K[z].valueOf), L(K, U), (R[B] = !0);
+    q[z][W] || j(q[z], W, q[z].valueOf), L(q, U), (R[B] = !0);
   },
   pevA: function (e, t, n) {
     'use strict';
@@ -33090,7 +33182,7 @@
         : ((e = (G && e[G]) || e['@@iterator']),
           'function' === typeof e ? e : null);
     }
-    function K(e) {
+    function q(e) {
       if (void 0 === H)
         try {
           throw Error();
@@ -33100,10 +33192,10 @@
         }
       return '\n' + H + e;
     }
-    var q = !1;
+    var K = !1;
     function $(e, t) {
-      if (!e || q) return '';
-      q = !0;
+      if (!e || K) return '';
+      K = !0;
       var n = Error.prepareStackTrace;
       Error.prepareStackTrace = void 0;
       try {
@@ -33163,20 +33255,20 @@
             }
         }
       } finally {
-        (q = !1), (Error.prepareStackTrace = n);
+        (K = !1), (Error.prepareStackTrace = n);
       }
-      return (e = e ? e.displayName || e.name : '') ? K(e) : '';
+      return (e = e ? e.displayName || e.name : '') ? q(e) : '';
     }
     function Y(e) {
       switch (e.tag) {
         case 5:
-          return K(e.type);
+          return q(e.type);
         case 16:
-          return K('Lazy');
+          return q('Lazy');
         case 13:
-          return K('Suspense');
+          return q('Suspense');
         case 19:
-          return K('SuspenseList');
+          return q('SuspenseList');
         case 0:
         case 2:
         case 15:
@@ -33720,18 +33812,18 @@
     var Ve = !1;
     if (f)
       try {
-        var Ke = {};
-        Object.defineProperty(Ke, 'passive', {
+        var qe = {};
+        Object.defineProperty(qe, 'passive', {
           get: function () {
             Ve = !0;
           },
         }),
-          window.addEventListener('test', Ke, Ke),
-          window.removeEventListener('test', Ke, Ke);
+          window.addEventListener('test', qe, qe),
+          window.removeEventListener('test', qe, qe);
       } catch (Bc) {
         Ve = !1;
       }
-    function qe(e, t, n, r, o, a, i, u, l) {
+    function Ke(e, t, n, r, o, a, i, u, l) {
       var c = Array.prototype.slice.call(arguments, 3);
       try {
         t.apply(n, c);
@@ -33749,7 +33841,7 @@
         },
       };
     function Je(e, t, n, r, o, a, i, u, l) {
-      ($e = !1), (Ye = null), qe.apply(Xe, arguments);
+      ($e = !1), (Ye = null), Ke.apply(Xe, arguments);
     }
     function et(e, t, n, r, o, a, u, l, c) {
       if ((Je.apply(this, arguments), $e)) {
@@ -34172,7 +34264,7 @@
                             ? ((Gt = 1), 1073741824)
                             : ((Gt = 8), e))))));
     }
-    function Kt(e) {
+    function qt(e) {
       switch (e) {
         case 99:
           return 15;
@@ -34187,7 +34279,7 @@
           return 0;
       }
     }
-    function qt(e) {
+    function Kt(e) {
       switch (e) {
         case 15:
         case 14:
@@ -34600,7 +34692,7 @@
         },
       }),
       Vn = bn(Gn),
-      Kn = o({}, jn, {
+      qn = o({}, jn, {
         pointerId: 0,
         width: 0,
         height: 0,
@@ -34612,7 +34704,7 @@
         pointerType: 0,
         isPrimary: 0,
       }),
-      qn = bn(Kn),
+      Kn = bn(qn),
       $n = o({}, Sn, {
         touches: 0,
         targetTouches: 0,
@@ -34932,11 +35024,11 @@
           'change selectionchange textInput compositionstart compositionend compositionupdate'.split(
             ' ',
           ),
-        Kr = 0;
-      Kr < Vr.length;
-      Kr++
+        qr = 0;
+      qr < Vr.length;
+      qr++
     )
-      Ut.set(Vr[Kr], 0);
+      Ut.set(Vr[qr], 0);
     s('onMouseEnter', ['mouseout', 'mouseover']),
       s('onMouseLeave', ['mouseout', 'mouseover']),
       s('onPointerEnter', ['pointerout', 'pointerover']),
@@ -34968,12 +35060,12 @@
           ' ',
         ),
       );
-    var qr =
+    var Kr =
         'abort canplay canplaythrough durationchange emptied encrypted ended error loadeddata loadedmetadata loadstart pause play playing progress ratechange seeked seeking stalled suspend timeupdate volumechange waiting'.split(
           ' ',
         ),
       $r = new Set(
-        'cancel close invalid load scroll toggle'.split(' ').concat(qr),
+        'cancel close invalid load scroll toggle'.split(' ').concat(Kr),
       );
     function Yr(e, t, n) {
       var r = e.type || 'unknown-event';
@@ -35177,7 +35269,7 @@
               case 'pointerout':
               case 'pointerover':
               case 'pointerup':
-                l = qn;
+                l = Kn;
             }
             var s = 0 !== (4 & t),
               f = !s && 'scroll' === e,
@@ -35233,7 +35325,7 @@
               (d = 'onMouseEnter'),
               (h = 'mouse'),
               ('pointerout' !== e && 'pointerover' !== e) ||
-                ((s = qn),
+                ((s = Kn),
                 (v = 'onPointerLeave'),
                 (d = 'onPointerEnter'),
                 (h = 'pointer')),
@@ -35575,8 +35667,8 @@
         : Po(Do),
         Mo(Do, n);
     }
-    var Ko = null,
-      qo = null,
+    var qo = null,
+      Ko = null,
       $o = a.unstable_runWithPriority,
       Yo = a.unstable_scheduleCallback,
       Zo = a.unstable_cancelCallback,
@@ -36012,7 +36104,7 @@
         'function' === typeof o.componentDidMount && (e.flags |= 4);
     }
     var Va = Array.isArray;
-    function Ka(e, t, n) {
+    function qa(e, t, n) {
       if (
         ((e = n.ref),
         null !== e && 'function' !== typeof e && 'object' !== typeof e)
@@ -36042,7 +36134,7 @@
       }
       return e;
     }
-    function qa(e, t) {
+    function Ka(e, t) {
       if ('textarea' !== e.type)
         throw Error(
           i(
@@ -36098,9 +36190,9 @@
       }
       function c(e, t, n, r) {
         return null !== t && t.elementType === n.type
-          ? ((r = o(t, n.props)), (r.ref = Ka(e, t, n)), (r.return = e), r)
+          ? ((r = o(t, n.props)), (r.ref = qa(e, t, n)), (r.return = e), r)
           : ((r = yc(n.type, n.key, n.props, null, e.mode, r)),
-            (r.ref = Ka(e, t, n)),
+            (r.ref = qa(e, t, n)),
             (r.return = e),
             r);
       }
@@ -36125,7 +36217,7 @@
             case S:
               return (
                 (n = yc(t.type, t.key, t.props, null, e.mode, n)),
-                (n.ref = Ka(e, null, t)),
+                (n.ref = qa(e, null, t)),
                 (n.return = e),
                 n
               );
@@ -36134,7 +36226,7 @@
           }
           if (Va(t) || V(t))
             return (t = bc(t, e.mode, n, null)), (t.return = e), t;
-          qa(e, t);
+          Ka(e, t);
         }
         return null;
       }
@@ -36154,7 +36246,7 @@
               return n.key === o ? s(e, t, n, r) : null;
           }
           if (Va(n) || V(n)) return null !== o ? null : f(e, t, n, r, null);
-          qa(e, n);
+          Ka(e, n);
         }
         return null;
       }
@@ -36176,7 +36268,7 @@
               );
           }
           if (Va(r) || V(r)) return (e = e.get(n) || null), f(t, e, r, o, null);
-          qa(t, r);
+          Ka(t, r);
         }
         return null;
       }
@@ -36298,7 +36390,7 @@
                         if (c.elementType === a.type) {
                           n(e, c.sibling),
                             (r = o(c, a.props)),
-                            (r.ref = Ka(e, c, a)),
+                            (r.ref = qa(e, c, a)),
                             (r.return = e),
                             (e = r);
                           break e;
@@ -36314,7 +36406,7 @@
                     (r.return = e),
                     (e = r))
                   : ((l = yc(a.type, a.key, a.props, null, e.mode, l)),
-                    (l.ref = Ka(e, r, a)),
+                    (l.ref = qa(e, r, a)),
                     (l.return = e),
                     (e = l));
               }
@@ -36353,7 +36445,7 @@
           );
         if (Va(a)) return v(e, r, a, l);
         if (V(a)) return m(e, r, a, l);
-        if ((s && qa(e, a), 'undefined' === typeof a && !c))
+        if ((s && Ka(e, a), 'undefined' === typeof a && !c))
           switch (e.tag) {
             case 1:
             case 22:
@@ -36840,10 +36932,10 @@
     function Vi(e, t) {
       return Hi(516, 4, e, t);
     }
-    function Ki(e, t) {
+    function qi(e, t) {
       return Hi(4, 2, e, t);
     }
-    function qi(e, t) {
+    function Ki(e, t) {
       return 'function' === typeof t
         ? ((e = e()),
           t(e),
@@ -36861,7 +36953,7 @@
     function $i(e, t, n) {
       return (
         (n = null !== n && void 0 !== n ? n.concat([e]) : null),
-        Hi(4, 2, qi.bind(null, t, e), n)
+        Hi(4, 2, Ki.bind(null, t, e), n)
       );
     }
     function Yi() {}
@@ -36956,7 +37048,7 @@
         useImperativeHandle: function (e, t, n) {
           return (
             (n = null !== n && void 0 !== n ? n.concat([e]) : null),
-            Wi(4, 2, qi.bind(null, t, e), n)
+            Wi(4, 2, Ki.bind(null, t, e), n)
           );
         },
         useLayoutEffect: function (e, t) {
@@ -37060,7 +37152,7 @@
         useContext: _a,
         useEffect: Vi,
         useImperativeHandle: $i,
-        useLayoutEffect: Ki,
+        useLayoutEffect: qi,
         useMemo: Qi,
         useReducer: Pi,
         useRef: zi,
@@ -37104,7 +37196,7 @@
         useContext: _a,
         useEffect: Vi,
         useImperativeHandle: $i,
-        useLayoutEffect: Ki,
+        useLayoutEffect: qi,
         useMemo: Qi,
         useReducer: Mi,
         useRef: zi,
@@ -37202,24 +37294,24 @@
         o = r.children,
         a = null !== e ? e.memoizedState : null;
       if ('hidden' === r.mode || 'unstable-defer-without-hiding' === r.mode)
-        if (0 === (4 & t.mode)) (t.memoizedState = { baseLanes: 0 }), Kl(t, n);
+        if (0 === (4 & t.mode)) (t.memoizedState = { baseLanes: 0 }), ql(t, n);
         else {
           if (0 === (1073741824 & n))
             return (
               (e = null !== a ? a.baseLanes | n : n),
               (t.lanes = t.childLanes = 1073741824),
               (t.memoizedState = { baseLanes: e }),
-              Kl(t, e),
+              ql(t, e),
               null
             );
           (t.memoizedState = { baseLanes: 0 }),
-            Kl(t, null !== a ? a.baseLanes : n);
+            ql(t, null !== a ? a.baseLanes : n);
         }
       else
         null !== a
           ? ((r = a.baseLanes | n), (t.memoizedState = null))
           : (r = n),
-          Kl(t, r);
+          ql(t, r);
       return iu(e, t, o, n), t.child;
     }
     function fu(e, t) {
@@ -37666,7 +37758,7 @@
                   break;
                 case 'video':
                 case 'audio':
-                  for (e = 0; e < qr.length; e++) Qr(qr[e], r);
+                  for (e = 0; e < Kr.length; e++) Qr(Kr[e], r);
                   break;
                 case 'source':
                   Qr('error', r);
@@ -37751,7 +37843,7 @@
                   break;
                 case 'video':
                 case 'audio':
-                  for (a = 0; a < qr.length; a++) Qr(qr[a], e);
+                  for (a = 0; a < Kr.length; a++) Qr(Kr[a], e);
                   a = r;
                   break;
                 case 'source':
@@ -37981,7 +38073,7 @@
         case 23:
         case 24:
           return (
-            ql(),
+            Kl(),
             null !== e &&
               (null !== e.memoizedState) !== (null !== t.memoizedState) &&
               'unstable-defer-without-hiding' !== r.mode &&
@@ -38017,7 +38109,7 @@
           return Aa(e), null;
         case 23:
         case 24:
-          return ql(), null;
+          return Kl(), null;
         default:
           return null;
       }
@@ -38357,9 +38449,9 @@
       }
     }
     function Wu(e, t) {
-      if (qo && 'function' === typeof qo.onCommitFiberUnmount)
+      if (Ko && 'function' === typeof Ko.onCommitFiberUnmount)
         try {
-          qo.onCommitFiberUnmount(Ko, t);
+          Ko.onCommitFiberUnmount(qo, t);
         } catch (a) {}
       switch (t.tag) {
         case 0:
@@ -38470,9 +38562,9 @@
           break e;
         }
       }
-      r ? Ku(e, n, t) : qu(e, n, t);
+      r ? qu(e, n, t) : Ku(e, n, t);
     }
-    function Ku(e, t, n) {
+    function qu(e, t, n) {
       var r = e.tag,
         o = 5 === r || 6 === r;
       if (o)
@@ -38489,18 +38581,18 @@
                 null !== t.onclick ||
                 (t.onclick = uo));
       else if (4 !== r && ((e = e.child), null !== e))
-        for (Ku(e, t, n), e = e.sibling; null !== e; )
-          Ku(e, t, n), (e = e.sibling);
+        for (qu(e, t, n), e = e.sibling; null !== e; )
+          qu(e, t, n), (e = e.sibling);
     }
-    function qu(e, t, n) {
+    function Ku(e, t, n) {
       var r = e.tag,
         o = 5 === r || 6 === r;
       if (o)
         (e = o ? e.stateNode : e.stateNode.instance),
           t ? n.insertBefore(e, t) : n.appendChild(e);
       else if (4 !== r && ((e = e.child), null !== e))
-        for (qu(e, t, n), e = e.sibling; null !== e; )
-          qu(e, t, n), (e = e.sibling);
+        for (Ku(e, t, n), e = e.sibling; null !== e; )
+          Ku(e, t, n), (e = e.sibling);
     }
     function $u(e, t) {
       for (var n, r, o = t, a = !1; ; ) {
@@ -38731,7 +38823,7 @@
         (e = pa()),
         0 !== (4 & tl) && 98 === e
           ? (e = Zt(12, Rl))
-          : ((e = Kt(e)), (e = Zt(e, Rl))),
+          : ((e = qt(e)), (e = Zt(e, Rl))),
         e
       );
     }
@@ -38799,7 +38891,7 @@
             (n = ia))
           : 14 === t
           ? (n = ma(99, Wl.bind(null, e)))
-          : ((n = qt(t)), (n = ma(n, Ul.bind(null, e)))),
+          : ((n = Kt(t)), (n = ma(n, Ul.bind(null, e)))),
           (e.callbackPriority = t),
           (e.callbackNode = n);
       }
@@ -38972,10 +39064,10 @@
         (tl = n), 0 === tl && (ml(), ga());
       }
     }
-    function Kl(e, t) {
+    function ql(e, t) {
       Mo(il, al), (al |= t), (cl |= t);
     }
-    function ql() {
+    function Kl() {
       (al = il.current), Po(il);
     }
     function $l(e, t) {
@@ -39009,7 +39101,7 @@
               break;
             case 23:
             case 24:
-              ql();
+              Kl();
           }
           n = n.return;
         }
@@ -39480,10 +39572,10 @@
         0 === r && (El = null),
         1 === r ? (e === _l ? Cl++ : ((Cl = 0), (_l = e))) : (Cl = 0),
         (n = n.stateNode),
-        qo && 'function' === typeof qo.onCommitFiberRoot)
+        Ko && 'function' === typeof Ko.onCommitFiberRoot)
       )
         try {
-          qo.onCommitFiberRoot(Ko, n, void 0, 64 === (64 & n.current.flags));
+          Ko.onCommitFiberRoot(qo, n, void 0, 64 === (64 & n.current.flags));
         } catch (A) {}
       if ((Bl(e, da()), bl)) throw ((bl = !1), (e = wl), (wl = null), e);
       return 0 !== (8 & tl) || ga(), null;
@@ -40411,7 +40503,7 @@
       var Fc = __REACT_DEVTOOLS_GLOBAL_HOOK__;
       if (!Fc.isDisabled && Fc.supportsFiber)
         try {
-          (Ko = Fc.inject(Dc)), (qo = Fc);
+          (qo = Fc.inject(Dc)), (Ko = Fc);
         } catch (Bc) {}
     }
     (t.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED = Nc),
