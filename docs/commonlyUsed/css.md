@@ -23,12 +23,12 @@ group:
 2. 文本溢出隐藏
 
    ```css
-   /* 单行文本缩进 */
+   /* 单行文本隐藏 */
    overflow: hidden; /* 超出部分进行隐藏 */
    white-space: nowrap; /* 使文本不进行换行 */
    text-overflow: ellipsis; /* 超出部分的文字使用省略号代替 */
 
-   /* 多行文本缩进 */
+   /* 多行文本隐藏 */
    overflow: hidden; /* 超出部分进行隐藏 */
    text-overflow: ellipsis; /* 超出部分的文字使用省略号代替 */
    display: -webkit-box; /* CSS3 属性，流体布局 --- 弹性盒子 */
